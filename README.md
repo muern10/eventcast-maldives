@@ -55,4 +55,4 @@ See [development notes](docs/DEVELOPMENT.md) for route, content and deployment d
 
 ## Collaboration
 
-This repository is private. Its owner can invite collaborators through GitHub's repository access settings. Make changes on a branch, verify the build and open a pull request for review. Website deployment is a separate action.
+This repository is public and can be viewed through its GitHub link. Its owner can invite collaborators through GitHub's repository access settings to grant write access. Make changes on a branch, verify the build and open a pull request for review. Website deployment is a separate action.
