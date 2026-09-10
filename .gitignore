@@ -1,0 +1,27 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+
+# Local configuration, credentials and generated archives
+.env
+.env.*
+!.env.example
+.dev.vars*
+.wrangler/
+*.log
+*.zip
+*.pem
+*.key
+coverage/
+
+# Internal design/review history stays on this machine.
+/DESIGN.md
+/PRODUCT.md
+/docs/*
+!/docs/DEVELOPMENT.md
+!/docs/ASSETS.md
+
+# Unused historical font; its license restricts repository redistribution.
+/public/assets/fonts/Satoshi-Variable.woff2
+/public/assets/fonts/Satoshi-FFL.txt

@@ -1,0 +1,191 @@
+.booking {
+  width: 100%;
+  min-width: 0;
+  padding: 0 0 32px;
+  color: var(--ink);
+  font-family: inherit;
+  color-scheme: light;
+}
+.booking *, .booking *::before, .booking *::after { box-sizing: border-box; }
+.booking__intro { margin: 0 0 40px; }
+.booking__intro h2 {
+  margin: 0 0 20px;
+  color: var(--ink);
+  font: inherit;
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+.booking__intro p, .booking__review > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 48ch;
+}
+.booking__form { display: grid; gap: 24px; }
+.booking__field { min-width: 0; }
+.booking__field > label, .booking__label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.booking__field input:not([type="checkbox"]),
+.booking__field select,
+.booking__field textarea,
+.booking__summary {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 14px 16px;
+  border: 1px solid #8d8a85;
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: border-color 180ms var(--ease), background-color 180ms var(--ease);
+  color-scheme: light;
+}
+.booking__field textarea, .booking__summary { min-height: 128px; resize: vertical; }
+.booking__field input::placeholder, .booking__field textarea::placeholder { color: var(--muted); opacity: 1; }
+.booking__field select { padding-right: 32px; cursor: pointer; }
+.booking__field select option { color: var(--ink); background: var(--surface); }
+.booking__field :is(input:not([type="checkbox"]), textarea, select):hover { border-color: #767471; }
+.booking :is(input, textarea, select, button, a):focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+.booking__field :is(input, textarea, select):user-invalid { border-color: var(--brand); background: #fcf1f1; }
+.booking__field input:disabled {
+  color: #777470;
+  background: #eeece7;
+  border-color: #d5d1ca;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.booking__field input[type="date"] { appearance: auto; }
+.booking__hint {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.booking__field .booking__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  width: fit-content;
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.booking__checkbox input { width: 18px; height: 18px; margin: 0; accent-color: var(--brand); flex: none; }
+.booking__primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  border-radius: 28px;
+  color: var(--surface);
+  background: var(--brand);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 180ms var(--ease), transform 180ms var(--ease);
+}
+.booking__primary svg { flex: none; }
+.booking__primary:hover { background: #861421; }
+.booking__primary:active { transform: translateY(1px); }
+.booking__primary:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+.booking__submit-note { margin: -8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.booking__contact { padding-top: 24px; margin-top: 40px; border-top: 1px solid var(--line); }
+.booking__contact > span { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.booking__contact a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  margin-top: 4px;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 180ms var(--ease);
+}
+.booking__contact a svg { flex: none; }
+.booking__contact a:hover, .booking__contact a:active { color: var(--brand); }
+.booking__review h3 {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.booking__review h3:focus { outline: none; }
+.booking__review > .booking__label { margin-top: 28px; }
+.booking__summary { min-height: 296px; margin-bottom: 24px; font-size: 15px; line-height: 1.7; }
+.booking__review-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.booking__secondary, .booking__text-button {
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 180ms var(--ease), background-color 180ms var(--ease), border-color 180ms var(--ease);
+}
+.booking__secondary { border-color: #8d8a85; }
+.booking__secondary:hover { background: #eeece7; border-color: #767471; }
+.booking__secondary:active { background: #e7e4de; }
+.booking__text-button { text-decoration: underline; text-underline-offset: 5px; }
+.booking__text-button:hover, .booking__text-button:active { color: var(--brand); }
+.booking :is(.booking__secondary, .booking__text-button):disabled { opacity: 0.45; cursor: not-allowed; }
+.booking__review .booking__copy-status { margin-top: 24px; font-size: 13px; line-height: 1.6; }
+.booking__email {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-underline-offset: 5px;
+  transition: color 180ms var(--ease);
+}
+.booking__email:hover, .booking__email:active { color: var(--brand); }
+@media (max-width: 480px) {
+  .booking__intro { margin-bottom: 32px; }
+  .booking__intro h2 { font-size: 40px; }
+  .booking__form { gap: 24px; }
+  .booking__review h3 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .booking *, .booking *::before, .booking *::after { transition: none; }
+  .booking .booking__primary:active { transform: none; }
+}
