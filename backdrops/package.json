@@ -1,0 +1,14 @@
+{
+  "name": "eventcast-backdrops",
+  "private": true,
+  "type": "module",
+  "description": "Print and LED-wall backdrops produced by EventCast Maldives. Separate from the website build.",
+  "scripts": {
+    "build:customs-air-cargo-staff-night": "node customs-air-cargo-staff-night/build.mjs"
+  },
+  "devDependencies": {
+    "fontkit": "2.0.4",
+    "playwright": "1.63.0",
+    "wawoff2": "2.0.1"
+  }
+}

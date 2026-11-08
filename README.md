@@ -50,6 +50,7 @@ The social collection is manually curated. It does not automatically sync channe
 | Scroll entrances and page transitions | `src/useEditorialMotion.ts`, `src/usePageTransition.ts` |
 | Enquiry flow | `src/Booking.tsx` |
 | Original imagery and self-hosted fonts | `public/assets/` |
+| Event backdrops (print and LED, separate from the website build) | `backdrops/` |
 
 See [development notes](docs/DEVELOPMENT.md) for route, content and deployment details, and [asset sources](docs/ASSETS.md) for media attribution and font licenses.
 
